@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+
+        <!-- 列表项 -->
+        <include layout="@layout/item_incognito_mode" />
+
+        <include layout="@layout/item_divider" />
+
+        <include layout="@layout/item_seting" />
+        <include layout="@layout/item_about" />
+
+        <!-- 其他列表项 -->
+    </LinearLayout>
+
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"
@@ -19,4 +38,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

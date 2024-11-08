@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/readerFragment"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- 主阅读区域，初始空白，通过代码动态添加View -->
-    <FrameLayout
-        android:id="@+id/readerContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <!-- 模式切换按钮，可以放在底部或顶部 -->
-    <ImageButton
-        android:id="@+id/btnSwitchMode"
+    <!-- 按钮用于切换阅读模式 -->
+    <Button
+        android:id="@+id/modeSwitchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/setting"
-        android:contentDescription="@string/switch_mode" />
+        android:text="Switch Mode"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
 
-</FrameLayout>
+    <!-- 动态加载 ViewPager 或 RecyclerView 的容器 -->
+    <LinearLayout
+        android:id="@+id/readerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+</LinearLayout>

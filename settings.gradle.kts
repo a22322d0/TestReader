@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "TestReader"
 include(":app")
+<<<<<<< HEAD
+=======
  
+>>>>>>> 32f18d266921fcde509e3d58500e62cf5837a511

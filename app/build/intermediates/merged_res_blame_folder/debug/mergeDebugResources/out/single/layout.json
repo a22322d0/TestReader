@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.testreader.app-mergeDebugResources-44:/layout/fragment_home.xml",
+        "source": "com.example.testreader.app-main-47:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-mergeDebugResources-44:/layout/fragment_dashboard.xml",
+        "source": "com.example.testreader.app-main-47:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-mergeDebugResources-44:/layout/item_image_page.xml",
+        "source": "com.example.testreader.app-main-47:/layout/item_image_page.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-mergeDebugResources-44:/layout/fragment_notifications.xml",
+        "source": "com.example.testreader.app-main-47:/layout/fragment_notifications.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-mergeDebugResources-44:/layout/book_item.xml",
+        "source": "com.example.testreader.app-main-47:/layout/book_item.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.example.testreader.app-main-47:/layout/activity_main.xml"
+    }
+]

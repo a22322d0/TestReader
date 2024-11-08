@@ -1,75 +1,114 @@
 package com.example.testreader.ui.home;
 
-import android.content.Intent;
-import android.net.Uri;
+import java.util.ArrayList;
+
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.widget.GridView;
+import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.BaseAdapter;
+import android.content.Context;
+
 import androidx.fragment.app.Fragment;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.testreader.R;
-import com.example.testreader.utils.FilePicker;
-import com.example.testreader.utils.FileUtil;
-import com.example.testreader.utils.ImagePagerAdapter;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private List<File> imageFiles; // 用于存储解压的图片文件
-    private ViewPager2 viewPager;  // 使用类级别的变量
-    private ImagePagerAdapter adapter;
-
-    // 声明 ActivityResultLauncher
-    private final ActivityResultLauncher<Intent> filePickerLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == -1 && result.getData() != null) {
-                    Uri uri = FilePicker.handleFileResult(result.getData());
-                    if (uri != null) {
-                        // 在这里处理选择的文件（例如，解压）
-                        imageFiles = FileUtil.extractImagesFromCBZ(uri, getContext());
-
-                        // 设置适配器并更新 ViewPager
-                        adapter = new ImagePagerAdapter(getContext(), imageFiles);
-                        viewPager.setAdapter(adapter);
-                    }
-                }
-            }
-    );
-
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        viewPager = view.findViewById(R.id.viewPager); // 确保在你的 XML 布局中有对应的 ViewPager2
-        if (viewPager == null) {
-            Log.e("HomeFragment", "ViewPager2 is null");
-        }
+        GridView gridView = (GridView) view.findViewById(R.id.bookshelf_gridview);
 
-        Button selectFileButton = view.findViewById(R.id.selectFileButton);
-        adapter = new ImagePagerAdapter(getContext(), new ArrayList<>());
-        viewPager.setAdapter(adapter);
+        ArrayList<Book> books = new ArrayList<>();
+        books.add(new Book(R.drawable.book1, "黄沙之下","crab"));
+        books.add(new Book(R.drawable.book2, "剑来","烽火戏诸侯"));
+        books.add(new Book(R.drawable.book3, "我在精神病院学斩神","三九音域"));
+        books.add(new Book(R.drawable.book4, "深空彼岸","辰东"));
+        books.add(new Book(R.drawable.book5, "一剑独尊","青鸾峰上"));
+        books.add(new Book(R.drawable.book6, "仙武帝尊","六界三道"));
+        books.add(new Book(R.drawable.book7, "重生回1983当富翁","恩怨各一半"));
+        books.add(new Book(R.drawable.book8, "雪中悍刀行","烽火戏诸侯"));
 
-        selectFileButton.setOnClickListener(v -> openFilePicker());
+
+        BookAdapter adapter = new BookAdapter(getActivity(), books);
+
+        gridView.setAdapter(adapter);
 
         return view;
     }
 
-    private void openFilePicker() {
-        // 从 Fragment 中调用 FilePicker
-        Intent intent = FilePicker.createFilePickerIntent();
-        filePickerLauncher.launch(intent);
+    public class Book {
+        private final int mCover;
+        private final String mTitle;
+
+        private final String mAuthor;
+
+        public Book(int cover, String title, String Author) {
+            this.mCover = cover;
+            this.mTitle = title;
+            this.mAuthor = Author;
+        }
+
+        public int getCover() {
+            return mCover;
+        }
+
+        public String getTitle() {
+            return mTitle;
+        }
+        public String getAuthor() {
+            return mAuthor;
+        }
     }
+
+    public class BookAdapter extends BaseAdapter {
+        private final Context mContext;
+        private final ArrayList<Book> mBooks;
+
+        public BookAdapter(Context context, ArrayList<Book> books) {
+            this.mContext = context;
+            this.mBooks = books;
+        }
+
+        @Override
+        public int getCount() {
+            return mBooks.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return mBooks.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.book_item, parent, false);
+            }
+
+            ImageView cover = (ImageView) convertView.findViewById(R.id.book_cover);
+            TextView title = (TextView) convertView.findViewById(R.id.book_title);
+            TextView author = (TextView) convertView.findViewById(R.id.book_author);
+
+            Book book = mBooks.get(position);
+
+            cover.setImageResource(book.getCover());
+            title.setText(book.getTitle());
+            author.setText(book.getAuthor());
+
+            return convertView;
+        }
+    }
+
 }

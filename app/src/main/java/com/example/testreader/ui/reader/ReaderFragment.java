@@ -1,5 +1,9 @@
 package com.example.testreader.ui.reader;
 
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +20,7 @@ import com.example.testreader.R;
 import com.example.testreader.utils.ImagePagerAdapter;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderFragment extends Fragment {
@@ -79,7 +84,7 @@ public class ReaderFragment extends Fragment {
 
             // 如果是间隔模式，设置间隔装饰器
             if (mode == MODE_SPACED_VERTICAL) {
-                //recyclerView.addItemDecoration(new SpacingItemDecoration(getResources().getDimensionPixelSize(R.dimen.page_spacing)));
+                recyclerView.addItemDecoration(new SpacingItemDecoration(getResources().getDimensionPixelSize(R.dimen.page_spacing)));
             }
 
             recyclerView.setAdapter(adapter);
@@ -95,11 +100,14 @@ public class ReaderFragment extends Fragment {
     }
 
     private List<File> getComicPages() {
-        // 这里应该根据你的需求，返回漫画页面的文件列表
-        return null; // 替换为实际的文件获取逻辑
+        // 从 Fragment 的 arguments 中获取传递的数据
+        Bundle arguments = getArguments();
+        if (arguments != null) {
+            return (List<File>) arguments.getSerializable("imageFiles");
+        }
+        return new ArrayList<>();  // 返回一个空列表，以防没有传递数据
     }
 
-    // 你可以为 RecyclerView 添加一个间隔装饰器（例如，在 SpacedVertical 模式下）
     public static class SpacingItemDecoration extends RecyclerView.ItemDecoration {
         private final int space;
 
@@ -108,10 +116,32 @@ public class ReaderFragment extends Fragment {
         }
 
         @Override
-        public void getItemOffsets(@NonNull android.graphics.Rect outRect, @NonNull View view,
+        public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+            super.onDrawOver(c, parent, state);
+
+            // 创建画笔并设置颜色为黑色
+            Paint paint = new Paint();
+            paint.setColor(Color.BLACK);  // 使用黑色
+
+            // 获取 RecyclerView 中所有的 child view
+            int childCount = parent.getChildCount();
+            for (int i = 0; i < childCount; i++) {
+                View child = parent.getChildAt(i);
+
+                // 获取子项的底部坐标
+                int top = child.getBottom();
+                int bottom = top + space;
+
+                // 绘制间隔色块（黑色）
+                c.drawRect(child.getLeft(), top, child.getRight(), bottom, paint);
+            }
+        }
+
+        @Override
+        public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
                                    @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
             super.getItemOffsets(outRect, view, parent, state);
-            outRect.bottom = space; // 设置下方间距
+            outRect.bottom = space; // 设置底部间距
         }
     }
 }

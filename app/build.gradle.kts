@@ -54,6 +54,10 @@ dependencies {
 
     implementation("com.squareup.picasso:picasso:2.8") // 使用最新版本
 
+    //导航跳转
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.5.0")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.5.0")
+
 
 
 }

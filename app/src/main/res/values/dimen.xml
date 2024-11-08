@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="page_spacing">100dp</dimen>
+    <color name="page_spacing_color">#FF0000</color>
+</resources>

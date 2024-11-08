@@ -1,0 +1,158 @@
+[
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book3.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book3.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/layout_item_image_page.xml.flat",
+        "source": "com.example.testreader.app-main-47:/layout/item_image_page.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book5.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book5.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/xml_backup_rules.xml.flat",
+        "source": "com.example.testreader.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book7.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book7.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.testreader.app-main-47:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_default_bookcover.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/default_bookcover.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book2.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book2.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/layout_book_item.xml.flat",
+        "source": "com.example.testreader.app-main-47:/layout/book_item.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/xml_book_title.xml.flat",
+        "source": "com.example.testreader.app-main-47:/xml/book_title.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book4.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book4.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/layout_fragment_dashboard.xml.flat",
+        "source": "com.example.testreader.app-main-47:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/navigation_mobile_navigation.xml.flat",
+        "source": "com.example.testreader.app-main-47:/navigation/mobile_navigation.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/xml_book_cover.xml.flat",
+        "source": "com.example.testreader.app-main-47:/xml/book_cover.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book6.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book6.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_bg_bookshelf.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/bg_bookshelf.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.testreader.app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_ic_home_black_24dp.xml.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/layout_fragment_home.xml.flat",
+        "source": "com.example.testreader.app-main-47:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book1.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book1.png"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/layout_activity_main.xml.flat",
+        "source": "com.example.testreader.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.testreader.app-main-47:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/layout_fragment_notifications.xml.flat",
+        "source": "com.example.testreader.app-main-47:/layout/fragment_notifications.xml"
+    },
+    {
+        "merged": "com.example.testreader.app-debug-45:/drawable_book8.png.flat",
+        "source": "com.example.testreader.app-main-47:/drawable/book8.png"
+    }
+]

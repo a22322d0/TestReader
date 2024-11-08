@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/readerFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 主阅读区域，初始空白，通过代码动态添加View -->
+    <FrameLayout
+        android:id="@+id/readerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 模式切换按钮，可以放在底部或顶部 -->
+    <ImageButton
+        android:id="@+id/btnSwitchMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/setting"
+        android:contentDescription="@string/switch_mode" />
+
+</FrameLayout>

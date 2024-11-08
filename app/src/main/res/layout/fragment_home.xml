@@ -14,17 +14,16 @@
         android:text="选择 CBZ 漫画文件"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/openReaderButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open Reader"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center" />
-
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Open Reader" />
 
 
     <!-- 用于展示漫画图片的 ViewPager2 -->
@@ -33,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="-104dp" />
+        tools:layout_editor_absoluteY="-104dp" >
+    </androidx.viewpager2.widget.ViewPager2>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

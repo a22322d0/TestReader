@@ -81,15 +81,29 @@ public class HomeFragment extends Fragment {
 
     private void openReaderFragment() {
         if (imageFiles != null && !imageFiles.isEmpty()) {
+            // 隐藏 HomeFragment 中的按钮
+            hideHomeButtons();
+
             // 获取 NavController
             NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
             Bundle bundle = new Bundle();
             bundle.putSerializable("imageFiles", new ArrayList<>(imageFiles));  // 将 imageFiles 传递到 ReaderFragment
 
-            // 跳转到 ReaderFragment 并传递数据
+            // 跳转到 ReaderFragment
             navController.navigate(R.id.readerFragment, bundle);
         } else {
             Log.e("HomeFragment", "No images to display in ReaderFragment");
         }
     }
+
+    private void hideHomeButtons() {
+        Button openReaderButton = getView().findViewById(R.id.openReaderButton);
+        Button selectFileButton = getView().findViewById(R.id.selectFileButton);
+        if (openReaderButton != null && selectFileButton != null ) {
+            openReaderButton.setVisibility(View.GONE);  // 隐藏按钮
+            selectFileButton.setVisibility(View.GONE);
+        }
+    }
+
+
 }

@@ -4,4 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="switch_mode">切换模式</string>
+    <!-- 在 res/values/styles.xml 中 -->
+    <style name="Theme.TestReader.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
 </resources>

@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+array reply_entries
+array reply_values
 color black
 color lime
 color purple_200
@@ -25,7 +27,6 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
-id background_image
 id book_author
 id book_cover
 id book_cover_image
@@ -41,7 +42,6 @@ id navigation_dashboard
 id navigation_home
 id navigation_notifications
 id selectFileButton
-id text_home
 id text_notifications
 id viewPager
 layout activity_main
@@ -55,7 +55,15 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 string app_name
+string attachment_summary_off
+string attachment_summary_on
+string attachment_title
 string choose_CBZ
+string messages_header
+string reply_title
+string signature_title
+string sync_header
+string sync_title
 string title_dashboard
 string title_home
 string title_notifications
@@ -64,3 +72,4 @@ xml backup_rules
 xml book_cover
 xml book_title
 xml data_extraction_rules
+xml pref_notifications

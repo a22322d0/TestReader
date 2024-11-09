@@ -166,6 +166,7 @@ public class ReaderFragment extends Fragment {
 
     private void switchMode() {
         // 切换模式
+        // 之后要改这个的实现，通过按钮设置和点击事件。
         currentMode = (currentMode + 1) % 5;  // 从 0 到 4 循环切换模式
         setupMode(currentMode);
         showModeToast(currentMode);

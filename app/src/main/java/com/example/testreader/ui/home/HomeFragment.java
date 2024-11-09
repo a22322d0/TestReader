@@ -8,8 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import androidx.appcompat.widget.Toolbar;
+
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -60,6 +64,10 @@ public class HomeFragment extends Fragment {
             Log.e("HomeFragment", "ViewPager2 is null");
         }
 
+        //Toolbar toolbar = view.findViewById(R.id.home_toolbar);
+        //((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
+
+
         Button selectFileButton = view.findViewById(R.id.selectFileButton);
         adapter = new ImagePagerAdapter(getContext(), new ArrayList<>());
         viewPager.setAdapter(adapter);
@@ -81,11 +89,12 @@ public class HomeFragment extends Fragment {
 
     private void openReaderFragment() {
         if (imageFiles != null && !imageFiles.isEmpty()) {
+            // 获取 NavController
+            NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
             // 隐藏 HomeFragment 中的按钮
             hideHomeButtons();
 
-            // 获取 NavController
-            NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+
             Bundle bundle = new Bundle();
             bundle.putSerializable("imageFiles", new ArrayList<>(imageFiles));  // 将 imageFiles 传递到 ReaderFragment
 

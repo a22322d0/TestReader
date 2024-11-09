@@ -1,37 +1,76 @@
 package com.example.testreader.ui.dashboard;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import android.widget.Button;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.testreader.databinding.FragmentDashboardBinding;
+import com.example.testreader.R;
+import com.example.testreader.utils.FilePicker;
+import com.example.testreader.utils.FileUtil;
+import com.example.testreader.utils.ImagePagerAdapter;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DashboardFragment extends Fragment {
+    private List<File> imageFiles; // 用于存储解压的图片文件
+    private ViewPager2 viewPager;  // 使用类级别的变量
+    private ImagePagerAdapter adapter;
 
-    private FragmentDashboardBinding binding;
+    // 声明 ActivityResultLauncher
+    private final ActivityResultLauncher<Intent> filePickerLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == -1 && result.getData() != null) {
+                    Uri uri = FilePicker.handleFileResult(result.getData());
+                    if (uri != null) {
+                        // 在这里处理选择的文件（例如，解压）
+                        imageFiles = FileUtil.extractImagesFromCBZ(uri, getContext());
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+                        // 设置适配器并更新 ViewPager
+                        adapter = new ImagePagerAdapter(getContext(), imageFiles);
+                        viewPager.setAdapter(adapter);
+                    }
+                }
+            }
+    );
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+    @SuppressLint("MissingInflatedId")
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        viewPager = view.findViewById(R.id.viewPager); // 确保在你的 XML 布局中有对应的 ViewPager2
+        if (viewPager == null) {
+            Log.e("DashboardFragment", "ViewPager2 is null");
+        }
+
+        Button selectFileButton = view.findViewById(R.id.selectFileButton);
+        adapter = new ImagePagerAdapter(getContext(), new ArrayList<>());
+        viewPager.setAdapter(adapter);
+
+        selectFileButton.setOnClickListener(v -> openFilePicker());
+
+        return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    private void openFilePicker() {
+        // 从 Fragment 中调用 FilePicker
+        Intent intent = FilePicker.createFilePickerIntent();
+        filePickerLauncher.launch(intent);
     }
 }

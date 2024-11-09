@@ -15,7 +15,8 @@
         android:textAlignment="center"
         android:text="选择 CBZ 漫画文件"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- Open Reader Button -->
     <Button

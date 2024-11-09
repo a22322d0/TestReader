@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -166,6 +168,19 @@ public class ReaderFragment extends Fragment {
         // 切换模式
         currentMode = (currentMode + 1) % 5;  // 从 0 到 4 循环切换模式
         setupMode(currentMode);
+        showModeToast(currentMode);
+    }
+
+    private void showModeToast(int mode) {
+        String modeMessage = "";
+        switch (mode) {
+            case 0: modeMessage = "模式1: 从左至右"; break;
+            case 1: modeMessage = "模式2: 从右至左"; break;
+            case 2: modeMessage = "模式3: 单页垂直滚动"; break;
+            case 3: modeMessage = "模式4: 连续垂直滚动"; break;
+            case 4: modeMessage = "模式5: 间隔垂直滚动"; break;
+        }
+        Toast.makeText(requireContext(), modeMessage, Toast.LENGTH_SHORT).show();
     }
 
     private void setupMode(int mode) {

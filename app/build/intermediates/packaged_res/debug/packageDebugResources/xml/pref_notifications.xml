@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:key="username"
+            android:title="Username"
+            android:summary="Enter your username"
+            android:dialogTitle="Username" />
+
+        <SwitchPreference
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

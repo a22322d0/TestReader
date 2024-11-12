@@ -4,10 +4,10 @@ package com.example.testreader.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.testreader.R;
@@ -17,20 +17,51 @@ import java.lang.String;
 
 public final class FragmentNotificationsBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final TextView textNotifications;
+  public final ImageView cancelButton;
 
-  private FragmentNotificationsBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textNotifications) {
+  @NonNull
+  public final LinearLayout line1;
+
+  @NonNull
+  public final LinearLayout line2;
+
+  @NonNull
+  public final LinearLayout line3;
+
+  @NonNull
+  public final LinearLayout notificationAbout;
+
+  @NonNull
+  public final LinearLayout notificationHelp;
+
+  @NonNull
+  public final LinearLayout notificationPrivateBrowsing;
+
+  @NonNull
+  public final LinearLayout notificationSettings;
+
+  private FragmentNotificationsBinding(@NonNull LinearLayout rootView,
+      @NonNull ImageView cancelButton, @NonNull LinearLayout line1, @NonNull LinearLayout line2,
+      @NonNull LinearLayout line3, @NonNull LinearLayout notificationAbout,
+      @NonNull LinearLayout notificationHelp, @NonNull LinearLayout notificationPrivateBrowsing,
+      @NonNull LinearLayout notificationSettings) {
     this.rootView = rootView;
-    this.textNotifications = textNotifications;
+    this.cancelButton = cancelButton;
+    this.line1 = line1;
+    this.line2 = line2;
+    this.line3 = line3;
+    this.notificationAbout = notificationAbout;
+    this.notificationHelp = notificationHelp;
+    this.notificationPrivateBrowsing = notificationPrivateBrowsing;
+    this.notificationSettings = notificationSettings;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -55,13 +86,57 @@ public final class FragmentNotificationsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.text_notifications;
-      TextView textNotifications = ViewBindings.findChildViewById(rootView, id);
-      if (textNotifications == null) {
+      id = R.id.cancel_button;
+      ImageView cancelButton = ViewBindings.findChildViewById(rootView, id);
+      if (cancelButton == null) {
         break missingId;
       }
 
-      return new FragmentNotificationsBinding((ConstraintLayout) rootView, textNotifications);
+      id = R.id.line1;
+      LinearLayout line1 = ViewBindings.findChildViewById(rootView, id);
+      if (line1 == null) {
+        break missingId;
+      }
+
+      id = R.id.line2;
+      LinearLayout line2 = ViewBindings.findChildViewById(rootView, id);
+      if (line2 == null) {
+        break missingId;
+      }
+
+      id = R.id.line3;
+      LinearLayout line3 = ViewBindings.findChildViewById(rootView, id);
+      if (line3 == null) {
+        break missingId;
+      }
+
+      id = R.id.notification_about;
+      LinearLayout notificationAbout = ViewBindings.findChildViewById(rootView, id);
+      if (notificationAbout == null) {
+        break missingId;
+      }
+
+      id = R.id.notification_help;
+      LinearLayout notificationHelp = ViewBindings.findChildViewById(rootView, id);
+      if (notificationHelp == null) {
+        break missingId;
+      }
+
+      id = R.id.notification_private_browsing;
+      LinearLayout notificationPrivateBrowsing = ViewBindings.findChildViewById(rootView, id);
+      if (notificationPrivateBrowsing == null) {
+        break missingId;
+      }
+
+      id = R.id.notification_settings;
+      LinearLayout notificationSettings = ViewBindings.findChildViewById(rootView, id);
+      if (notificationSettings == null) {
+        break missingId;
+      }
+
+      return new FragmentNotificationsBinding((LinearLayout) rootView, cancelButton, line1, line2,
+          line3, notificationAbout, notificationHelp, notificationPrivateBrowsing,
+          notificationSettings);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

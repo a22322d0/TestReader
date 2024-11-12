@@ -1,15 +1,25 @@
 package com.example.testreader.ui.notifications;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import androidx.preference.PreferenceFragmentCompat;
+import androidx.fragment.app.Fragment;
 
 import com.example.testreader.R;
 
-public class NotificationsFragment extends PreferenceFragmentCompat {
+public class NotificationsFragment extends Fragment {
 
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.pref_notifications, rootKey);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_notifications, container, false);
+    }
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 }

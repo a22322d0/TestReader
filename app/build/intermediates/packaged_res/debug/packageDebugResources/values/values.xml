@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="lime">#01FF70</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -7,14 +15,20 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="wechat_gray">#EBEBEB</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="about">关于</string>
     <string name="app_name">TestReader</string>
     <string name="choose_CBZ">选择 CBZ 漫画文件</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_home">Home</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="help">帮助</string>
+    <string name="notification_icon">psyduck</string>
+    <string name="private_browsing">无痕浏览</string>
+    <string name="settings">设置</string>
+    <string name="title_dashboard">阅览</string>
+    <string name="title_home">书架</string>
+    <string name="title_notifications">更多</string>
     <style name="Theme.TestReader" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

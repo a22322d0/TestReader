@@ -1,5 +1,6 @@
 package com.example.testreader.ui.dashboard;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,12 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import androidx.appcompat.widget.Toolbar;
-
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -23,19 +22,28 @@ import androidx.viewpager2.widget.ViewPager2;
 
 
 import com.example.testreader.R;
+import com.example.testreader.utils.Epub2Zip;
 import com.example.testreader.utils.FilePicker;
+import com.example.testreader.utils.FileSelector;
 import com.example.testreader.utils.FileUtil;
 import com.example.testreader.utils.ImagePagerAdapter;
+import com.example.testreader.utils.Pdf2Zip;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardFragment extends Fragment {
+public class DashboardFragment extends Fragment implements FileSelector.OnFileSelectedListener {
 
     private List<File> imageFiles; // 用于存储解压的图片文件
     private ViewPager2 viewPager;  // 使用类级别的变量
     private ImagePagerAdapter adapter;
+
+    private Button selectPdfButton;
+    private Button selectEpubButton;
+    private ProgressBar progressBar;
+
+    private FileSelector fileSelector;
 
     // 声明 ActivityResultLauncher
     private final ActivityResultLauncher<Intent> filePickerLauncher = registerForActivityResult(
@@ -79,6 +87,17 @@ public class DashboardFragment extends Fragment {
         Button openReaderButton = view.findViewById(R.id.openReaderButton);
         openReaderButton.setOnClickListener(v -> openReaderFragment());
 
+
+        selectPdfButton = view.findViewById(R.id.selectPdfButton);
+        selectEpubButton = view.findViewById(R.id.selectEpubButton);
+        progressBar = view.findViewById(R.id.progressBar);
+
+        // 初始化 FileSelector
+        fileSelector = new FileSelector(this);
+        // 设置按钮点击事件
+        selectPdfButton.setOnClickListener(v -> fileSelector.selectPdfFile(this));
+        selectEpubButton.setOnClickListener(v -> fileSelector.selectEpubFile(this));
+
         return view;
     }
 
@@ -86,6 +105,15 @@ public class DashboardFragment extends Fragment {
         // 从 Fragment 中调用 FilePicker
         Intent intent = FilePicker.createFilePickerIntent();
         filePickerLauncher.launch(intent);
+    }
+
+    public void onFileSelected(Uri fileUri, String fileType) {
+        Context context = getContext();
+        if (fileType.equals("pdf")) {
+            Pdf2Zip.processPdf(fileUri, progressBar, context);
+        } else if (fileType.equals("epub")) {
+            Epub2Zip.processEpub(fileUri, progressBar, context);
+        }
     }
 
     private void openReaderFragment() {
@@ -112,6 +140,12 @@ public class DashboardFragment extends Fragment {
             openReaderButton.setVisibility(View.GONE);  // 隐藏按钮
             selectFileButton.setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        fileSelector.handleActivityResult(requestCode, resultCode, data, getContext());
     }
 
 }

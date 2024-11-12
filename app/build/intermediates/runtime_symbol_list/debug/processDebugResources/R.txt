@@ -3554,6 +3554,7 @@ int id preferences_detail 0x7f090173
 int id preferences_header 0x7f090174
 int id preferences_sliding_pane_layout 0x7f090175
 int id pressed 0x7f090176
+int id progressBar 0x7f090215
 int id progress_circular 0x7f090177
 int id progress_horizontal 0x7f090178
 int id radio 0x7f090179
@@ -3593,7 +3594,9 @@ int id search_src_text 0x7f090198
 int id search_voice_btn 0x7f090199
 int id seekbar 0x7f09019a
 int id seekbar_value 0x7f09019b
+int id selectEpubButton 0x7f090216
 int id selectFileButton 0x7f09019c
+int id selectPdfButton 0x7f090217
 int id select_dialog_listview 0x7f09019d
 int id selected 0x7f09019e
 int id selection_type 0x7f09019f

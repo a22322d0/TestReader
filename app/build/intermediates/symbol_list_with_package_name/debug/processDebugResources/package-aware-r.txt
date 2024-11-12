@@ -3555,6 +3555,7 @@ id preferences_detail
 id preferences_header
 id preferences_sliding_pane_layout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3594,7 +3595,9 @@ id search_src_text
 id search_voice_btn
 id seekbar
 id seekbar_value
+id selectEpubButton
 id selectFileButton
+id selectPdfButton
 id select_dialog_listview
 id selected
 id selection_type

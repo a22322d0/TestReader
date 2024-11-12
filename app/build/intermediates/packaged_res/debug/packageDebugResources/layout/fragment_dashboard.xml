@@ -22,10 +22,40 @@
         android:id="@+id/openReaderButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open Reader"
+        android:text="开始阅读"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectFileButton" />
+
+    <Button
+        android:id="@+id/selectPdfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导入 PDF 文件"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/openReaderButton"/>
+
+
+    <Button
+        android:id="@+id/selectEpubButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导入 Epub 文件"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectPdfButton"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:indeterminate="false"
+        tools:ignore="MissingConstraints" />
 
     <!-- ViewPager2 for displaying comic images -->
     <androidx.viewpager2.widget.ViewPager2

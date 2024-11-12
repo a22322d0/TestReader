@@ -44,9 +44,12 @@ id navigation_dashboard
 id navigation_home
 id navigation_notifications
 id openReaderButton
+id progressBar
 id readerContainer
 id readerFragment
+id selectEpubButton
 id selectFileButton
+id selectPdfButton
 id text_notifications
 id viewPager
 layout activity_main

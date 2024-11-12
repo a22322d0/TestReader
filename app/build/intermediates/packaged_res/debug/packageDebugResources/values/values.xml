@@ -19,6 +19,7 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="page_spacing">30dp</dimen>
     <string name="about">关于</string>
     <string name="app_name">TestReader</string>
     <string name="choose_CBZ">选择 CBZ 漫画文件</string>

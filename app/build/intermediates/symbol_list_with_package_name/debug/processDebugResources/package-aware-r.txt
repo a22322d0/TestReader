@@ -2964,6 +2964,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen page_spacing
 dimen preference_dropdown_padding_start
 dimen preference_icon_minWidth
 dimen preference_seekbar_padding_horizontal
@@ -3464,6 +3465,7 @@ id message
 id middle
 id mini
 id mobile_navigation
+id modeSwitchButton
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3527,6 +3529,7 @@ id notification_settings
 id off
 id on
 id onInterceptTouchReturnSwipe
+id openReaderButton
 id open_search_bar_text_view
 id open_search_view_background
 id open_search_view_clear_button
@@ -3563,10 +3566,13 @@ id preferences_detail
 id preferences_header
 id preferences_sliding_pane_layout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id readerContainer
+id readerFragment
 id rectangles
 id recycler_view
 id report_drawn
@@ -3600,7 +3606,9 @@ id search_src_text
 id search_voice_btn
 id seekbar
 id seekbar_value
+id selectEpubButton
 id selectFileButton
+id selectPdfButton
 id select_dialog_listview
 id selected
 id selection_type
@@ -3855,6 +3863,7 @@ layout expand_button
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
+layout fragment_reader
 layout image_frame
 layout item_image_page
 layout m3_alert_dialog

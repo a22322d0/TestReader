@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,15 +22,33 @@ public final class FragmentDashboardBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button openReaderButton;
+
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final Button selectEpubButton;
+
+  @NonNull
   public final Button selectFileButton;
+
+  @NonNull
+  public final Button selectPdfButton;
 
   @NonNull
   public final ViewPager2 viewPager;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button selectFileButton, @NonNull ViewPager2 viewPager) {
+      @NonNull Button openReaderButton, @NonNull ProgressBar progressBar,
+      @NonNull Button selectEpubButton, @NonNull Button selectFileButton,
+      @NonNull Button selectPdfButton, @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
+    this.openReaderButton = openReaderButton;
+    this.progressBar = progressBar;
+    this.selectEpubButton = selectEpubButton;
     this.selectFileButton = selectFileButton;
+    this.selectPdfButton = selectPdfButton;
     this.viewPager = viewPager;
   }
 
@@ -60,9 +79,33 @@ public final class FragmentDashboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.openReaderButton;
+      Button openReaderButton = ViewBindings.findChildViewById(rootView, id);
+      if (openReaderButton == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.selectEpubButton;
+      Button selectEpubButton = ViewBindings.findChildViewById(rootView, id);
+      if (selectEpubButton == null) {
+        break missingId;
+      }
+
       id = R.id.selectFileButton;
       Button selectFileButton = ViewBindings.findChildViewById(rootView, id);
       if (selectFileButton == null) {
+        break missingId;
+      }
+
+      id = R.id.selectPdfButton;
+      Button selectPdfButton = ViewBindings.findChildViewById(rootView, id);
+      if (selectPdfButton == null) {
         break missingId;
       }
 
@@ -72,7 +115,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, selectFileButton, viewPager);
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, openReaderButton,
+          progressBar, selectEpubButton, selectFileButton, selectPdfButton, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

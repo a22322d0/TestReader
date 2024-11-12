@@ -6,24 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
+    <!-- Select File Button -->
     <Button
         android:id="@+id/selectFileButton"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:textAlignment="center"
-        android:text="@string/choose_CBZ"
-
+        android:text="选择 CBZ 漫画文件"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Open Reader Button -->
+    <Button
+        android:id="@+id/openReaderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Reader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectFileButton" />
 
-    <!-- 用于展示漫画图片的 ViewPager2 -->
+    <!-- ViewPager2 for displaying comic images -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="-104dp" />
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/openReaderButton"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2962,6 +2962,7 @@ int dimen notification_small_icon_size_as_large 0x7f070311
 int dimen notification_subtext_size 0x7f070312
 int dimen notification_top_pad 0x7f070313
 int dimen notification_top_pad_large_text 0x7f070314
+int dimen page_spacing 0x7f070325
 int dimen preference_dropdown_padding_start 0x7f070315
 int dimen preference_icon_minWidth 0x7f070316
 int dimen preference_seekbar_padding_horizontal 0x7f070317
@@ -3456,6 +3457,7 @@ int id message 0x7f090114
 int id middle 0x7f090115
 int id mini 0x7f090116
 int id mobile_navigation 0x7f090117
+int id modeSwitchButton 0x7f090211
 int id month_grid 0x7f090118
 int id month_navigation_bar 0x7f090119
 int id month_navigation_fragment_toggle 0x7f09011a
@@ -3515,6 +3517,7 @@ int id notification_main_column_container 0x7f09014f
 int id off 0x7f090150
 int id on 0x7f090151
 int id onInterceptTouchReturnSwipe 0x7f090152
+int id openReaderButton 0x7f090212
 int id open_search_bar_text_view 0x7f090153
 int id open_search_view_background 0x7f090154
 int id open_search_view_clear_button 0x7f090155
@@ -3555,6 +3558,8 @@ int id progress_circular 0x7f090177
 int id progress_horizontal 0x7f090178
 int id radio 0x7f090179
 int id ratio 0x7f09017a
+int id readerContainer 0x7f090213
+int id readerFragment 0x7f090214
 int id rectangles 0x7f09017b
 int id recycler_view 0x7f09017c
 int id report_drawn 0x7f09017d
@@ -3844,6 +3849,7 @@ int layout expand_button 0x7f0c002e
 int layout fragment_dashboard 0x7f0c002f
 int layout fragment_home 0x7f0c0030
 int layout fragment_notifications 0x7f0c0031
+int layout fragment_reader 0x7f0c0081
 int layout image_frame 0x7f0c0032
 int layout item_image_page 0x7f0c0033
 int layout m3_alert_dialog 0x7f0c0034

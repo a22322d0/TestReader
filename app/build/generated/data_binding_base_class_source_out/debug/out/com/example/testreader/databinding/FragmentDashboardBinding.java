@@ -21,14 +21,19 @@ public final class FragmentDashboardBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button openReaderButton;
+
+  @NonNull
   public final Button selectFileButton;
 
   @NonNull
   public final ViewPager2 viewPager;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button selectFileButton, @NonNull ViewPager2 viewPager) {
+      @NonNull Button openReaderButton, @NonNull Button selectFileButton,
+      @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
+    this.openReaderButton = openReaderButton;
     this.selectFileButton = selectFileButton;
     this.viewPager = viewPager;
   }
@@ -60,6 +65,12 @@ public final class FragmentDashboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.openReaderButton;
+      Button openReaderButton = ViewBindings.findChildViewById(rootView, id);
+      if (openReaderButton == null) {
+        break missingId;
+      }
+
       id = R.id.selectFileButton;
       Button selectFileButton = ViewBindings.findChildViewById(rootView, id);
       if (selectFileButton == null) {
@@ -72,7 +83,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, selectFileButton, viewPager);
+      return new FragmentDashboardBinding((ConstraintLayout) rootView, openReaderButton,
+          selectFileButton, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

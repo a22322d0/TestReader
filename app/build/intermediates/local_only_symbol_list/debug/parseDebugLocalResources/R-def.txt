@@ -12,6 +12,7 @@ color teal_700
 color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen page_spacing
 drawable bg_bookshelf
 drawable book1
 drawable book2
@@ -36,11 +37,15 @@ id bookshelf_gridview
 id container
 id imageView
 id mobile_navigation
+id modeSwitchButton
 id nav_host_fragment_activity_main
 id nav_view
 id navigation_dashboard
 id navigation_home
 id navigation_notifications
+id openReaderButton
+id readerContainer
+id readerFragment
 id selectFileButton
 id text_notifications
 id viewPager
@@ -49,6 +54,7 @@ layout book_item
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
+layout fragment_reader
 layout item_image_page
 menu bottom_nav_menu
 mipmap ic_launcher

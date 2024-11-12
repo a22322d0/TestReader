@@ -1,23 +1,31 @@
 [
     {
-        "merged": "com.example.testreader.app-mergeDebugResources-45:/layout/fragment_notifications.xml",
-        "source": "com.example.testreader.app-main-48:/layout/fragment_notifications.xml"
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\item_image_page.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\item_image_page.xml"
     },
     {
-        "merged": "com.example.testreader.app-mergeDebugResources-45:/layout/book_item.xml",
-        "source": "com.example.testreader.app-main-48:/layout/book_item.xml"
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.testreader.app-mergeDebugResources-45:/layout/activity_main.xml",
-        "source": "com.example.testreader.app-main-48:/layout/activity_main.xml"
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "com.example.testreader.app-mergeDebugResources-45:/layout/fragment_home.xml",
-        "source": "com.example.testreader.app-main-48:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "com.example.testreader.app-mergeDebugResources-45:/layout/item_image_page.xml",
-        "source": "com.example.testreader.app-main-48:/layout/item_image_page.xml"
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\fragment_reader.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\fragment_reader.xml"
+    },
+    {
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\book_item.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\book_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-mergeDebugResources-45:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\janyw\\.gradle\\daemon\\8.7\\com.example.testreader.app-main-48:\\layout\\fragment_dashboard.xml"
     },
     {
         "merged": "com.example.testreader.app-mergeDebugResources-45:/layout/fragment_dashboard.xml",

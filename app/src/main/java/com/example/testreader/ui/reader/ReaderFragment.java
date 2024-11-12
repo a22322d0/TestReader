@@ -68,43 +68,5 @@ public class ReaderFragment extends Fragment {
         return new ArrayList<>();  // 返回一个空列表，以防没有传递数据
     }
 
-    //======================= ui ================================
 
-    // The SpacingItemDecoration class for adding space between items in RecyclerView
-    public static class SpacingItemDecoration extends RecyclerView.ItemDecoration {
-        private final int space;
-
-        public SpacingItemDecoration(int space) {
-            this.space = space;
-        }
-
-        @Override
-        public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-            super.onDrawOver(c, parent, state);
-
-            // Create a paint object and set the color to black
-            Paint paint = new Paint();
-            paint.setColor(Color.BLACK);
-
-            // Get all the child views of RecyclerView
-            int childCount = parent.getChildCount();
-            for (int i = 0; i < childCount; i++) {
-                View child = parent.getChildAt(i);
-
-                // Calculate the bottom of the child view
-                int top = child.getBottom();
-                int bottom = top + space;
-
-                // Draw a black rectangle to create spacing
-                c.drawRect(child.getLeft(), top, child.getRight(), bottom, paint);
-            }
-        }
-
-        @Override
-        public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
-                                   @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-            super.getItemOffsets(outRect, view, parent, state);
-            outRect.bottom = space; // Set the bottom space between items
-        }
-    }
 }

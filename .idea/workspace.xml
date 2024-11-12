@@ -51,7 +51,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48293cb1-7ca0-4559-9a6f-d2857103d043" name="更改" comment="将模式选择单独分离出来，保持readerFragment的简洁" />
+    <list default="true" id="48293cb1-7ca0-4559-9a6f-d2857103d043" name="更改" comment="模式5的ui也从readerFragment中分离">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testreader/ui/reader/model/TimerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -307,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731399530534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="模式5的ui也从readerFragment中分离">
+      <option name="closed" value="true" />
+      <created>1731399810229</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731399810229</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,7 +341,8 @@
     <MESSAGE value="对书架界面加入滚动，并简单设计了设置页面" />
     <MESSAGE value="更改背景色，并对设置页面设置了基本选项" />
     <MESSAGE value="将模式选择单独分离出来，保持readerFragment的简洁" />
-    <option name="LAST_COMMIT_MESSAGE" value="将模式选择单独分离出来，保持readerFragment的简洁" />
+    <MESSAGE value="模式5的ui也从readerFragment中分离" />
+    <option name="LAST_COMMIT_MESSAGE" value="模式5的ui也从readerFragment中分离" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

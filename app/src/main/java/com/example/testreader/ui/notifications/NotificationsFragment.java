@@ -23,3 +23,4 @@ public class NotificationsFragment extends Fragment {
         super.onDestroyView();
     }
 }
+

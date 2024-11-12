@@ -4,7 +4,7 @@
             "outputFile": "com.example.testreader.app-mergeDebugResources-44:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\19110\\.gradle\\caches\\transforms-4\\79b6012fc3d866764b41b9aa2ed96719\\transformed\\material-1.10.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\janyw\\.gradle\\caches\\transforms-4\\79b6012fc3d866764b41b9aa2ed96719\\transformed\\material-1.10.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

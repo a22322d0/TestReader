@@ -13,6 +13,7 @@ color wechat_gray
 color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen page_spacing
 drawable baseline_help_24
 drawable baseline_info_24
 drawable baseline_remove_red_eye_24
@@ -46,6 +47,7 @@ id line1
 id line2
 id line3
 id mobile_navigation
+id modeSwitchButton
 id nav_host_fragment_activity_main
 id nav_view
 id navigation_dashboard
@@ -55,13 +57,20 @@ id notification_about
 id notification_help
 id notification_private_browsing
 id notification_settings
+id openReaderButton
+id progressBar
+id readerContainer
+id readerFragment
+id selectEpubButton
 id selectFileButton
+id selectPdfButton
 id viewPager
 layout activity_main
 layout book_item
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
+layout fragment_reader
 layout item_image_page
 menu bottom_nav_menu
 mipmap ic_launcher

@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentReaderBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final Button modeSwitchButton;
@@ -26,16 +26,20 @@ public final class FragmentReaderBinding implements ViewBinding {
   @NonNull
   public final FrameLayout readerContainer;
 
-  private FragmentReaderBinding(@NonNull LinearLayout rootView, @NonNull Button modeSwitchButton,
-      @NonNull FrameLayout readerContainer) {
+  @NonNull
+  public final TextView timeDisplay;
+
+  private FragmentReaderBinding(@NonNull FrameLayout rootView, @NonNull Button modeSwitchButton,
+      @NonNull FrameLayout readerContainer, @NonNull TextView timeDisplay) {
     this.rootView = rootView;
     this.modeSwitchButton = modeSwitchButton;
     this.readerContainer = readerContainer;
+    this.timeDisplay = timeDisplay;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -72,7 +76,14 @@ public final class FragmentReaderBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentReaderBinding((LinearLayout) rootView, modeSwitchButton, readerContainer);
+      id = R.id.timeDisplay;
+      TextView timeDisplay = ViewBindings.findChildViewById(rootView, id);
+      if (timeDisplay == null) {
+        break missingId;
+      }
+
+      return new FragmentReaderBinding((FrameLayout) rootView, modeSwitchButton, readerContainer,
+          timeDisplay);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

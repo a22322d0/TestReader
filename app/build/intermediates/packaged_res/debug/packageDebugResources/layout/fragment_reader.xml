@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:fitsSystemWindows="true">
-    <!-- 按钮用于切换阅读模式 -->
 
+    <!-- 按钮用于切换阅读模式 -->
     <Button
         android:id="@+id/modeSwitchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Switch Mode"
-        android:layout_gravity="center"
+        android:text="阅读模式切换"
+        android:layout_gravity = "top"
         android:layout_marginTop="16dp" />
 
 
@@ -21,4 +20,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-</LinearLayout>
+    <!-- 时间显示 TextView -->
+    <TextView
+        android:id="@+id/timeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:text="已阅读: 0 秒"
+        android:textSize="18sp"
+        android:textColor="@android:color/black" />
+
+</FrameLayout>
